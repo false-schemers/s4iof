@@ -11,7 +11,7 @@ There is no installation to speak of; just grab the file and compile it with you
 Here's how you can compile S4IOF on a unix box:
 
 ```
-gcc -o s4iof -Wall -O3 -DNDEBUG s4iof.c
+gcc -o s4iof -O3 -DNDEBUG s4iof.c -lm
 ```
 
 Please note that some compilers may issue hundreds of warnings; we recommend to add `-Wno-parentheses-equality` for
@@ -29,13 +29,10 @@ S4IOF is true to basic Scheme principles -- it features precise garbage collecto
 
   *  hygienic macro facilities (`define-syntax` & friends) are not implemented
   *  there is a simple `define-macro` facility for S-expression rewriting
-  *  `read` and `string->symbol` are case-sensitive
-  *  `eval` is single-argument; environment functions are not implemented
+  *  single-argument `eval` is available
   *  fixnums are limited to 24 bits, flonums are doubles
   *  no support for bignums/rational/complex numbers
-  *  `max` and `min` do not preserve inexactness
   *  some run-time errors such as zero division and fixnum overflows trigger asserts in C code unless `NDEBUG` is defined during compilation
-  * `transcript-on` and `transcript-off` are not implemented
 
 S4IOF supports some popular extensions defined in other standards and libraries:
 

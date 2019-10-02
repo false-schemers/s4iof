@@ -53,4 +53,4 @@ SIOF's on-the-fly compiler is derived from Marc Feeley's Scheme Interpreter (see
 
 ## Family
 
-Please see [SIOF](https://github.com/false-schemers/siof) repository for the latest (and biggest) single-file scheme implementation.
+Please see [S5IOF](https://github.com/false-schemers/s5iof) for a smaller system with hygienic macros, [SIOF](https://github.com/false-schemers/siof) for the latest (and biggest) single-file scheme implementation.
